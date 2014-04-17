@@ -128,7 +128,8 @@ var FamousGenerator = yeoman.generators.Base.extend({
           mixpanel.track('initialization', {
             distinct_id: this.rc.unique_id,
             packageName: this.pkg.name,
-            pacakgeVersion: this.pkg.version
+            pacakgeVersion: this.pkg.version,
+            type: 'yo famous'
           });
         }
         fs.writeFile(this.home + '/.famousrc', JSON.stringify(this.rc));
